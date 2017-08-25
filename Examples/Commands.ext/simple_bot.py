@@ -6,7 +6,7 @@ from discord.ext import commands
 description = """I am a basic bot made to show off what you can do with the commands.ext extension of discord.py."""
 
 prefix = "?" # any prefix you wish can be used
-bot = commands.Bot(command_prefix=prefix) # Bot can be anything you want. Some people use client or whatever, 
+bot = commands.Bot(command_prefix=prefix,description) # Bot can be anything you want. Some people use client or whatever, 
                                           # so it'd be client = commands.Bot(command_prefix=prefix,description=description)
                                           # Just make sure wherever I use "bot" in my code, you'd use what you defined.
 
@@ -15,7 +15,7 @@ async def on_ready(): # when the bot starts up
     print("Starting up bot user:\n{0.name}#{0.discriminator}\n{0.id}\n==========".format(bot.user))
     
 # simple bot commands
-@bot.command(pass_context=True)
+@bot.command()
 async def say(sayThis: str):
     await bot.say(sayThis) # This is a common way of doing it but throws an error with no args.
                            # The next command will be a better way of handling args.
