@@ -6,7 +6,7 @@ from discord.ext import commands
 description = """I am a basic bot made to show off what you can do with the commands.ext extension of discord.py."""
 
 prefix = "?" # any prefix you wish can be used
-bot = commands.Bot(command_prefix=prefix,description) # Bot can be anything you want. Some people use client or whatever, 
+bot = commands.Bot(command_prefix=prefix,description=description) # Bot can be anything you want. Some people use client or whatever, 
                                           # so it'd be client = commands.Bot(command_prefix=prefix,description=description)
                                           # Just make sure wherever I use "bot" in my code, you'd use what you defined.
 
