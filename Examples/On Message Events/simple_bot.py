@@ -32,8 +32,8 @@ async def on_message(message):
                 await client.send_message("Goodbye, {0.mention}!".format(message.author))
                 
                 
-@bot.event
+@client.event
 async def on_ready():
     print("Starting bot user.")
     
-bot.run('token')
+client.run('token')
