@@ -26,10 +26,10 @@ js = r.json()
 The `js` variable is now subscriptable. Use this to send the file part of the json. Here is a very basic example for a command using this api.
 ```py
 @bot.command()
-async def cat():
+async def cat(ctx):
     r = requests.get('http://random.cat/meow')
     js = r.json()
-    await bot.say(js['file'])
+    await ctx.say(js['file'])
 ```
 Now that you have this, you should be able to use this method with any **JSON** APIs that don't require authorization keys. 
 I will do another guide with using authorization keys and with other methods (like xml APIs). 
