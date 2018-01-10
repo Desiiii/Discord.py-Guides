@@ -73,9 +73,9 @@ async def on_command_error(ctx, error):
 # Assuming the prefix is '?', you would do '?test'
 # The result that the bot would send back is: 'Test received'
 @bot.command()
-async def test():
+async def test(ctx):
     """OwO whats this?"""
-    await bot.say("Test received!")
+    await ctx.send("Test received!")
 
 
 # Hey look at that. You have an extremely basic bot with very few features!... I know, you want more.
